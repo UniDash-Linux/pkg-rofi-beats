@@ -3,7 +3,7 @@
   lib,
   makeWrapper,
   mpv,
-  youtube-dl,
+  youtube-dl-light,
   rofi-wayland,
 }:
 ############
@@ -57,7 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
     wrapProgram $out/bin/play-music \
       --prefix PATH : ${lib.makeBinPath [
         mpv
-        youtube-dl
+        youtube-dl-light
         rofi-wayland
       ]}
   '';
